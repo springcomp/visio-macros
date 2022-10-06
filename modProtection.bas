@@ -8,7 +8,8 @@ Public Sub ProtectShapeGroup()
 '
     
     'Enable diagram services
-    EnableDiagramServices
+    Dim nServicesEnabled As Long
+    Let nServicesEnabled = EnableDiagramServices
 
     Dim UndoScopeID1 As Long
     UndoScopeID1 = Application.BeginUndoScope("Propriétés de protection")
@@ -37,6 +38,6 @@ Public Sub ProtectShapeGroup()
     Application.EndUndoScope UndoScopeID1, True
 
     'Restore diagram services
-    ResetDiagramServices
+    SetDiagramServices nServicesEnabled
 
 End Sub
