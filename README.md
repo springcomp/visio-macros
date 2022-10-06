@@ -1,0 +1,1 @@
+This repository contains the source code for Visual Basic for Applications macros for Microsoft Visio® that I find useful.
